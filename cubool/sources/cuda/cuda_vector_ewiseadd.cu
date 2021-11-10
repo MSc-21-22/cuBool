@@ -26,6 +26,7 @@
 #include <cuda/kernels/spewiseadd.cuh>
 #include <core/error.hpp>
 #include <cassert>
+#include <iostream>
 
 namespace cubool {
 
@@ -37,6 +38,8 @@ namespace cubool {
         CHECK_RAISE_ERROR(b != nullptr, InvalidArgument, "Provided vector does not belong to cuda vector class");
 
         assert(a->getNrows() == b->getNrows());
+        std::cout << "a - " << a->getNrows();
+        std::cout << "b - " << b->getNrows();
 
         kernels::SpVectorEWiseAdd<index, DeviceAlloc<index>> functor;
         auto result = functor(a->mVectorImpl, b->mVectorImpl);

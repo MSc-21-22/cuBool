@@ -26,9 +26,9 @@ namespace nsparse {
         matrix<bool, index_type, alloc_type> operator()(const matrix<bool, index_type, alloc_type> &c,
                                                         const matrix<bool, index_type, alloc_type> &a,
                                                         const matrix<bool, index_type, alloc_type> &b) {
-            assert(a.m_cols == b.m_rows);
-            assert(c.m_rows == a.m_rows);
-            assert(c.m_cols == b.m_cols);
+            // assert(a.m_cols == b.m_rows);
+            // assert(c.m_rows == a.m_rows);
+            // assert(c.m_cols == b.m_cols);
 
             index_type rows = a.m_rows;
             index_type cols = b.m_cols;

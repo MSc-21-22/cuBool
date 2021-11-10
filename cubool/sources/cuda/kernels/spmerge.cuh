@@ -49,9 +49,6 @@ namespace cubool {
                 using namespace nsparse::meta;
                 constexpr size_t max = std::numeric_limits<size_t>::max();
 
-                assert(a.m_rows == b.m_rows);
-                assert(a.m_cols == b.m_cols);
-
                 IndexType rows = a.m_rows;
                 IndexType cols = a.m_rows;
 
